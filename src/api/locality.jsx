@@ -1,4 +1,4 @@
-import Api from "./Api";
+import Api from "./ApiLegacy";
 
 function findAllRegions(
     callback

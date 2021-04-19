@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Home from "./page/Home";
 import Locality from "./page/Locality";
 import RegionalIntensiveCareAdmission from "./page/RegionalIntensiveCareAdmission";
+import Login from "./page/Login";
 
 function App() {
     return (
@@ -20,6 +21,11 @@ function App() {
                         {/* Home */}
                         <Route exact path='/' render={(props) =>
                             <Home {...props} />
+                        }/>
+
+                        {/* Home */}
+                        <Route exact path='/login' render={(props) =>
+                            <Login {...props} />
                         }/>
 
                         {/* Locality: Departments and Regions */}

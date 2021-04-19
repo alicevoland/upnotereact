@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 function Navbar(props) {
     let links = [
         <NavLink key="home" className="nav-item nav-link" to="/"> Accueil </NavLink>,
+        <NavLink key="login" className="nav-item nav-link" to="/login"> Login </NavLink>,
         <NavLink key="locality" className="nav-item nav-link" to="/locality"> Départements </NavLink>,
         <NavLink key="icadminreg" className="nav-item nav-link" to="/regionalIntensiveCareAdmissions"> Admissions Réa par
             région </NavLink>,

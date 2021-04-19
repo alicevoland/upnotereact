@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Api from "../api/Api";
+import Api from "../api/ApiLegacy";
 import LocalityTable from "../component/locality/LocalityTable";
 import Jumbo from "../component/common/Jumbo";
 import Navbar from "../component/common/Navbar";
