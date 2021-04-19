@@ -15,6 +15,9 @@ function UserStatus({user}) {
                     <Link key="login" className="nav-item nav-link"
                           to="/login"> Connexion ou inscription </Link>,
                 </p>
+                <p>
+                    Vous pouvez utiliser le login/mot de passe de démo : "username"/"password".
+                </p>
             </>
         )
     } else {
