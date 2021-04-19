@@ -9,4 +9,4 @@ This project is part of [upNote](https://github.com/mvoland/upnote) toy projects
 
 ## Presentation
 
-Work in progress (currently not functional) - initially based on Cov19React UI
+Very minimal frontend: handle login/registration, note creation and deletion
