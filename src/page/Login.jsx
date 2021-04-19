@@ -65,7 +65,7 @@ function LoginForm(props) {
                     ...prevState,
                     successMessage: 'Connexion réussie',
                     error: null
-                }))
+                }));
             })
             .catch(function (error) {
                 console.log(error);

@@ -7,8 +7,7 @@ function Loading({isLoading, message, children}) {
         } else {
             return (
                 <p>Chargement en cours, veuillez patienter (hébérgement gratuit heroku, peut mettre quelques instants
-                    pour
-                    la première requête)</p>
+                    pour la première requête)</p>
             );
         }
     } else {

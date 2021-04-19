@@ -4,6 +4,7 @@ import Home from "./page/Home";
 import Locality from "./page/Locality";
 import RegionalIntensiveCareAdmission from "./page/RegionalIntensiveCareAdmission";
 import Login from "./page/Login";
+import Logout from "./page/Logout";
 
 function App() {
     return (
@@ -23,9 +24,14 @@ function App() {
                             <Home {...props} />
                         }/>
 
-                        {/* Home */}
+                        {/* Login */}
                         <Route exact path='/login' render={(props) =>
                             <Login {...props} />
+                        }/>
+
+                        {/* Logout */}
+                        <Route exact path='/logout' render={(props) =>
+                            <Logout {...props} />
                         }/>
 
                         {/* Locality: Departments and Regions */}
