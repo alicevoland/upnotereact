@@ -28,7 +28,10 @@ function Dashboard(props) {
 
     useEffect(updateNotes, [])
 
-    const onCreated = function (note) {
+    const handleCreated = function (note) {
+        updateNotes()
+    }
+    const handleDeleted = function (note) {
         updateNotes()
     }
 
@@ -43,14 +46,14 @@ function Dashboard(props) {
                 <div className={"row"}>
                     <div className="card col-12 col-lg-10 login-card mt-2 mx-auto hv-center p-4">
                         <h3>Nouvelle note</h3>
-                        <CreateNoteForm onCreated={onCreated}/>
+                        <CreateNoteForm onCreated={handleCreated}/>
                     </div>
                 </div>
                 <div className={"row"}>
                     {state.notes.map(note => {
                         return (
                             <div key={note.id} className="card col-12 col-lg-5 login-card m-2 mx-auto hv-center p-4">
-                                <NoteDisplay note={note}/>
+                                <NoteDisplay note={note} onDeleted={handleDeleted}/>
                             </div>
                         );
                     })}

@@ -16,7 +16,14 @@ function createNote(title, content) {
     );
 }
 
+function deleteNote(id) {
+    return api.delete(
+        'notes/' +id + '/'
+    );
+}
+
 export {
     getUserNotes,
     createNote,
+    deleteNote,
 }
