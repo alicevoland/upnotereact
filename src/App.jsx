@@ -1,10 +1,9 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import Home from "./page/Home";
-import Locality from "./page/Locality";
-import RegionalIntensiveCareAdmission from "./page/RegionalIntensiveCareAdmission";
 import Login from "./page/Login";
 import Logout from "./page/Logout";
+import Dashboard from "./page/Dashboard";
 
 function App() {
     return (
@@ -17,35 +16,29 @@ function App() {
 
 
                 {/* CONTENT */}
-                    <Switch>
+                <Switch>
 
-                        {/* Home */}
-                        <Route exact path='/' render={(props) =>
-                            <Home {...props} />
-                        }/>
+                    {/* Home */}
+                    <Route exact path='/' render={(props) =>
+                        <Home {...props} />
+                    }/>
 
-                        {/* Login */}
-                        <Route exact path='/login' render={(props) =>
-                            <Login {...props} />
-                        }/>
+                    {/* Login */}
+                    <Route exact path='/login' render={(props) =>
+                        <Login {...props} />
+                    }/>
 
-                        {/* Logout */}
-                        <Route exact path='/logout' render={(props) =>
-                            <Logout {...props} />
-                        }/>
+                    {/* Logout */}
+                    <Route exact path='/logout' render={(props) =>
+                        <Logout {...props} />
+                    }/>
 
-                        {/* Locality: Departments and Regions */}
-                        <Route exact path='/locality' render={(props) =>
-                            <Locality {...props} />
-                        }/>
+                    {/* Dashbord */}
+                    <Route exact path='/dashboard' render={(props) =>
+                        <Dashboard {...props} />
+                    }/>
 
-                        {/* Locality: Departments and Regions */}
-                        <Route exact path='/regionalIntensiveCareAdmissions' render={(props) =>
-                            <RegionalIntensiveCareAdmission {...props} />
-                        }/>
-
-
-                    </Switch>
+                </Switch>
             </BrowserRouter>
         </>
     );

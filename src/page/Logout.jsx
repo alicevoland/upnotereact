@@ -3,8 +3,7 @@ import Jumbo from "../component/common/Jumbo";
 import Content from "../component/common/Content";
 import React, {useEffect, useState} from "react";
 import Footer from "../component/common/Footer";
-import {login, register} from "../service/authentication"
-import {getToken, removeToken, setToken} from "../service/token";
+import {getToken, removeToken} from "../service/token";
 
 
 function Logout(props) {

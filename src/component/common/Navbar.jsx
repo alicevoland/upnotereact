@@ -8,6 +8,7 @@ function Navbar(props) {
     ]
 
     if (getToken()) {
+        links.push(<NavLink key="dashboard" className="nav-item nav-link" to="/dashboard"> Mes notes </NavLink>)
         links.push(<NavLink key="logout" className="nav-item nav-link" to="/logout"> Déconnexion </NavLink>)
     } else {
         links.push(<NavLink key="login" className="nav-item nav-link" to="/login"> Connexion/Inscription </NavLink>)
