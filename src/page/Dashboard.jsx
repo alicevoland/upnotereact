@@ -13,20 +13,23 @@ function Dashboard(props) {
         notes: []
     });
 
-    useEffect(() => {
-            getUserNotes()
-                .then(response => {
-                    console.log(response.data)
-                    setState((prevState) => ({
-                        notes: response.data
-                    }));
-                })
-        },
-        []
-    )
+
+    const updateNotes = () => {
+        getUserNotes()
+            .then(response => {
+                console.log(response.data)
+                var notes = response.data;
+                notes.sort((n, o) => o.updated_at.localeCompare(n.updated_at))
+                setState((prevState) => ({
+                    notes: notes
+                }));
+            })
+    }
+
+    useEffect(updateNotes, [])
 
     const onCreated = function (note) {
-        console.log(`Created ${note.created_at}`);
+        updateNotes()
     }
 
     return (

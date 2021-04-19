@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {login} from "../../service/authentication";
 import ErrorMessage from "../common/ErrorMessage";
 import {createNote} from "../../service/notes";
 
